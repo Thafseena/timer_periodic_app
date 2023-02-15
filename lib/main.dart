@@ -12,38 +12,38 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    Get.put(TimerController());
+   // Get.put(TimerController());
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
        
         primarySwatch: Colors.blue,
       ),
-      home:  MyHomePage(),
+      home:  CountdownPage(),
     );
   }
 }
 
-class MyHomePage extends GetView<TimerController>{
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Container(
-          height: 100,
-          width: 200,
-          decoration: ShapeDecoration(
-            color: Theme.of(context).primaryColor,
-            shape: StadiumBorder(
-              side: BorderSide(
-                width: 2,
-                color: Colors.red,
-              )
-            )),
-            child: Obx(() => Center(child: Text('${controller.time.value}'))),
-        ),
-      ),
-    );
-  }
+// class MyHomePage extends GetView<TimerController>{
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Center(
+//         child: Container(
+//           height: 100,
+//           width: 200,
+//           decoration: ShapeDecoration(
+//             color: Theme.of(context).primaryColor,
+//             shape: StadiumBorder(
+//               side: BorderSide(
+//                 width: 2,
+//                 color: Colors.red,
+//               )
+//             )),
+//             child: Obx(() => Center(child: Text('${controller.time.value}'))),
+//         ),
+//       ),
+//     );
+//   }
 
-}
+// }
